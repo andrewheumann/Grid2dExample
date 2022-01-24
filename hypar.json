@@ -1,0 +1,39 @@
+{
+    "$schema": "https://hypar.io/Schemas/Function.json",
+    "id": "ff683c93-60c1-4fc0-8b28-7a3c651d414b",
+    "name": "Grid2d Example",
+    "description": "The Grid2dExample function.",
+    "language": "C#",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "Grid Boundaries": {
+                "type": "array",
+                "items": {
+                    "$ref": "https://hypar.io/Schemas/Geometry/Polygon.json"
+                }
+            },
+            "Grid Alignment Transform": {
+                "$ref": "https://hypar.io/Schemas/Geometry/Transform.json",
+                "$hyparConstraints": {
+                    "enableRotation": true
+                }
+            },
+            "U Split Points": {
+                "type": "array",
+                "items": {
+                    "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+                }
+            },
+            "V Split Points": {
+                "type": "array",
+                "items": {
+                    "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+                }
+            }
+        }
+    },
+    "repository_url": "https://github.com/hypar-io/function",
+    "source_file_key": null,
+    "preview_image": null
+}
